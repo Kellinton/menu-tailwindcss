@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Responsivo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-800">
+
+    <nav class="bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="flex-shrink-0">
+                        <img class="h-8 w-8" src="assets/img/Luffys_flag_icon-icons.png" alt="logo kellinton">
+                    </a>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="#" class="hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out">Home</a>
+                            <a href="#" class="hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out">Sobre</a>
+                            <a href="#" class="hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out">Contato</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button id="botao" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-300 ease-in-out" aria-label="Menu" aria-expanded="false">
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewbox="0 0 24 24">
+                            <path stroke-linecaps="round" stoke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pd-3 sm:px-3">
+                <a href="#" class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium transition duration-300 ease-in-out">Home</a>
+                <a href="#" class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium transition duration-300 ease-in-out">Sobre</a>
+                <a href="#" class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium transition duration-300 ease-in-out">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const btn = document.getElementById("botao");
+        const menu = document.getElementById("menu");
+        //adicionar um Event Listener
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");//ao clicar, o toggle retira o hidden do menu
+        })
+    </script>
+</body>
+</html>
